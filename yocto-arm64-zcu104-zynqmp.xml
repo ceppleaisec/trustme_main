@@ -5,6 +5,9 @@
   <remote name="trustme"
     fetch="https://github.com/trustm3/"/>
 
+  <remote name="ceppleaisec"
+    fetch="https://github.com/ceppleaisec/"/>
+
   <remote  name="yocto"
 	  fetch="https://git.yoctoproject.org/git/"/>
 
@@ -23,14 +26,14 @@
   <project path="poky" name="poky" />
 
   <!-- MANIFEST Repo -->
-  <project path="trustme/manifest" name="trustme_main" remote="trustme" revision="master" />
-  <project path="trustme/build" name="trustme_build" remote="trustme" revision="master">
+  <project path="trustme/manifest" name="trustme_main" remote="ceppleaisec" revision="dev" />
+  <project path="trustme/build" name="trustme_build" remote="ceppleaisec" revision="dev">
      <copyfile src="yocto/init_ws_ids.sh" dest="init_ws.sh" />
   </project>
-  <project path="trustme/cml" name="device_fraunhofer_common_cml" remote="trustme" revision="trustx-master" />
+  <project path="trustme/cml" name="device_fraunhofer_common_cml" remote="ceppleaisec" revision="dev" />
 
   <!-- TRUSTME -->
-  <project path="meta-trustx" name="meta-trustx" remote="trustme" revision="master" />
+  <project path="meta-trustx" name="meta-trustx" remote="ceppleaisec" revision="dev" />
   <project path="meta-trustx-xilinx" name="meta-trustx-xilinx" remote="trustme" revision="master" />
 
   <project path="meta-openembedded" name="meta-openembedded" remote="oe" />
